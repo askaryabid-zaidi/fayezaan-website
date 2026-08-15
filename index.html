@@ -1,207 +1,232 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Fayezaan Enterprise Pvt Ltd — trading, export and distribution from Hyderabad, India." />
-  <title>Fayezaan Enterprise Pvt Ltd</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --green:#074c35;
-      --green-2:#0c6546;
-      --green-3:#77a34a;
-      --ink:#10221a;
-      --cream:#f7f4ed;
-      --paper:#fffefa;
-      --line:#dcd8ce;
-      --gold:#c79545;
-      --soft:#6f766f;
-      --dark:#021c16;
-      --max:1180px;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.55}
-    a{color:inherit;text-decoration:none}
-    img{display:block;max-width:100%}
-    .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
-    header{position:sticky;top:0;z-index:50;background:rgba(255,254,250,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(7,76,53,.09)}
-    .nav{height:88px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{display:flex;align-items:center;gap:14px;min-width:260px}
-    .brand img{width:50px;height:52px;object-fit:contain}
-    .brand-name{font-family:'Playfair Display',serif;font-size:25px;letter-spacing:.12em;color:#123728;line-height:1}
-    .brand-sub{margin-top:7px;font-size:8.8px;letter-spacing:.42em;font-weight:600;color:#315845}
-    nav{display:flex;align-items:center;gap:34px;font-size:13px;font-weight:500}
-    nav a{padding:32px 0 28px;position:relative}
-    nav a:hover::after, nav a.active::after{content:"";position:absolute;left:0;right:0;bottom:18px;height:2px;background:var(--green-3)}
-    .menu-btn{display:none;background:none;border:0;font-size:28px;color:var(--green)}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Fayezaan Enterprise Pvt Ltd — trade, export and distribution from Hyderabad, India.">
+<title>Fayezaan Enterprise Pvt Ltd</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#064d34; --green2:#0d6a47; --leaf:#6d9842;
+  --ink:#10251b; --cream:#f7f4ed; --paper:#fffefa;
+  --line:#d9d5ca; --gold:#c99a4c; --dark:#021a14; --muted:#667069;
+  --max:1280px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.55}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
+header{position:sticky;top:0;z-index:30;background:rgba(255,254,250,.97);border-bottom:1px solid #ece9df}
+.nav{height:104px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{width:56px;height:62px;object-fit:contain}
+.brand-title{font-family:"Playfair Display",serif;font-size:29px;letter-spacing:.12em;color:#173c2c;line-height:1}
+.brand-sub{font-size:9px;letter-spacing:.38em;margin-top:8px;color:#315846;font-weight:600}
+nav{display:flex;gap:38px;font-size:14px;font-weight:500}
+nav a{padding:39px 0 35px;position:relative}
+nav a:hover:after,nav a.active:after{content:"";height:2px;background:var(--leaf);position:absolute;left:0;right:0;bottom:25px}
+.menu{display:none;background:none;border:0;font-size:28px;color:var(--green)}
 
-    .hero{min-height:620px;position:relative;overflow:hidden;background:linear-gradient(90deg,var(--cream) 0%,var(--cream) 39%,rgba(247,244,237,.94) 47%,rgba(4,47,35,.35) 58%,rgba(1,24,19,.25) 100%)}
-    .earth{position:absolute;inset:0 0 0 38%;background-image:linear-gradient(90deg,rgba(247,244,237,1) 0%,rgba(247,244,237,.05) 28%,rgba(2,31,24,.12) 100%),linear-gradient(0deg,rgba(1,39,29,.32),rgba(1,39,29,.18)),url('earth-night.jpg');background-size:cover;background-position:center 49%;filter:saturate(.72) sepia(.08) hue-rotate(76deg) brightness(.88) contrast(1.04)}
-    .earth::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 68% 44%,rgba(212,176,87,.15),transparent 30%),linear-gradient(90deg,transparent 0 63%,rgba(0,36,27,.22))}
-    .hero-grid{position:relative;z-index:2;min-height:620px;display:grid;grid-template-columns:44% 56%;align-items:center}
-    .hero-copy{padding:72px 0 74px}
-    .eyebrow{display:flex;align-items:center;gap:12px;color:#245b42;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
-    .eyebrow::before{content:"";width:24px;height:1px;background:var(--green-3)}
-    h1,h2,h3{font-family:'Playfair Display',serif;font-weight:500;margin:0}
-    h1{font-size:clamp(48px,5.2vw,76px);line-height:1.04;letter-spacing:-.035em;margin:25px 0 24px;max-width:650px}
-    h1 em{color:var(--green-2);font-weight:500}
-    .hero-copy p{max-width:440px;font-size:16px;color:#36463e;margin:0 0 30px}
-    .btn{display:inline-flex;align-items:center;gap:20px;background:var(--green);color:#fff;border:1px solid var(--green);padding:13px 19px;border-radius:5px;font-size:13px;transition:.2s ease}
-    .btn:hover{transform:translateY(-1px);background:#0b5e42}.btn span{font-size:18px}
+.hero{height:540px;background:var(--cream);overflow:hidden;border-bottom:1px solid #e3dfd4}
+.hero-grid{height:100%;display:grid;grid-template-columns:45% 55%}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;padding-right:50px}
+.eyebrow{display:flex;align-items:center;gap:12px;text-transform:uppercase;letter-spacing:.19em;color:#245c42;font-size:12px;font-weight:600}
+.eyebrow:before{content:"";width:25px;height:1px;background:var(--leaf)}
+h1,h2,h3{font-family:"Playfair Display",serif;margin:0;font-weight:500}
+h1{font-size:63px;line-height:1.04;letter-spacing:-.035em;margin:24px 0 22px}
+h1 em{color:var(--green2)}
+.hero-copy p{font-size:15px;color:#3e4a44;max-width:430px;margin:0 0 28px}
+.btn{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;background:var(--green);color:#fff;border:1px solid var(--green);border-radius:5px;padding:14px 18px;font-size:13px;width:max-content}
+.hero-image{height:100%;position:relative;overflow:hidden}
+.hero-image:before{content:"";position:absolute;z-index:2;inset:0;background:linear-gradient(90deg,var(--cream) 0%,rgba(247,244,237,.8) 10%,rgba(247,244,237,.12) 25%,transparent 44%)}
+.hero-image img{width:100%;height:100%;object-fit:cover;object-position:center}
 
-    section{position:relative}
-    .about{padding:82px 0 74px;background:#fffefa}
-    .section-kicker{font-size:11px;letter-spacing:.22em;color:var(--green);font-weight:600;text-transform:uppercase;margin-bottom:14px}
-    .about-grid{display:grid;grid-template-columns:1.05fr 1.25fr 1.2fr;gap:56px;align-items:start}
-    .about h2{font-size:42px;line-height:1.18}.about h2 em{color:var(--green);font-weight:500}
-    .about-copy{padding-top:34px;color:#35443d;font-size:15px}
-    .values{display:grid;grid-template-columns:repeat(3,1fr);border-left:1px solid var(--line);margin-top:22px}
-    .value{text-align:center;padding:0 18px;border-right:1px solid var(--line)}
-    .value svg{width:43px;height:43px;stroke:var(--green);fill:none;stroke-width:1.55;stroke-linecap:round;stroke-linejoin:round;margin:0 auto 13px}
-    .value b{display:block;font-family:'Playfair Display',serif;font-size:18px;margin-bottom:7px}.value small{font-size:11px;color:#58645e;line-height:1.55}
+.about{padding:54px 0 48px;background:#fffefa}
+.about-grid{display:grid;grid-template-columns:32% 31% 37%;gap:44px;align-items:center}
+.kicker{text-transform:uppercase;letter-spacing:.21em;font-size:11px;color:var(--green);font-weight:600;margin-bottom:12px}
+.about h2{font-size:40px;line-height:1.14}
+.about h2 em{color:var(--green2)}
+.about-copy{font-size:15px;color:#425048}
+.values{display:grid;grid-template-columns:repeat(3,1fr);border-left:1px solid var(--line)}
+.value{text-align:center;padding:0 16px;border-right:1px solid var(--line)}
+.value svg{width:42px;height:42px;stroke:var(--green);fill:none;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;margin:auto auto 10px}
+.value strong{font-family:"Playfair Display",serif;display:block;font-size:17px;margin-bottom:4px}
+.value small{font-size:11px;color:#667069;line-height:1.45}
 
-    .services{border-top:1px solid #eeeae0;border-bottom:1px solid #e9e5da;background:#fbfaf6;padding:54px 0}
-    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
-    .service{display:grid;grid-template-columns:62px 1fr;gap:18px;padding:6px 44px;border-right:1px solid var(--line)}
-    .service:first-child{padding-left:0}.service:last-child{border-right:0;padding-right:0}
-    .service svg{width:52px;height:52px;stroke:var(--green);fill:none;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
-    .service h3{font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;margin:2px 0 8px}.service p{font-size:12.5px;color:#5b635f;margin:0}
+.icon-strip{border-top:1px solid #ece8de;border-bottom:1px solid #e5e0d5;background:#fffefa}
+.icons{display:grid;grid-template-columns:repeat(6,1fr)}
+.icon-item{text-align:center;padding:30px 17px 27px;border-right:1px solid var(--line)}
+.icon-item:first-child{border-left:1px solid var(--line)}
+.icon-item svg{width:48px;height:48px;stroke:var(--green);fill:none;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;margin:auto auto 10px}
+.icon-item h3{font-family:"DM Sans",sans-serif;font-size:15px;font-weight:600;margin-bottom:5px}
+.icon-item p{font-size:11px;color:#68716c;margin:0}
 
-    .shahi{background:radial-gradient(circle at 24% 48%,rgba(31,87,60,.22),transparent 27%),linear-gradient(115deg,#041c16,#01130f 58%,#061d17);color:#f6eee2;padding:78px 0 72px;overflow:hidden}
-    .shahi::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 0 70%,rgba(2,22,17,.5));pointer-events:none}
-    .shahi-grid{position:relative;z-index:2;display:grid;grid-template-columns:34% 25% 41%;gap:28px;align-items:center}
-    .gold-kicker{font-size:11px;letter-spacing:.2em;color:#d5a653;text-transform:uppercase;font-weight:600}
-    .shahi h2{font-size:51px;line-height:1.02;color:#fff;margin:12px 0 20px}.shahi h2 span{display:block;color:#d5a653}.shahi-copy p{font-size:14px;color:#d8dbd6;max-width:335px;margin-bottom:26px}
-    .shahi .btn{background:transparent;border-color:#b98a3d;color:#f1c66e}
-    .scene{position:relative;height:390px;display:flex;align-items:flex-end;justify-content:center}
-    .scene img{width:100%;height:100%;object-fit:cover;object-position:50% 52%;mix-blend-mode:screen;opacity:.94;mask-image:linear-gradient(90deg,transparent 0,#000 16%,#000 84%,transparent 100%)}
-    .fragrances{padding-left:12px}.fragrances-title{font-family:'Playfair Display',serif;color:#e2bc73;font-size:21px;margin-bottom:22px;text-align:center}
-    .frag-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(210,166,83,.45);border-left:1px solid rgba(210,166,83,.28)}
-    .frag{text-align:center;padding:20px 8px 17px;border-right:1px solid rgba(210,166,83,.28);border-bottom:1px solid rgba(210,166,83,.28)}
-    .frag svg{width:47px;height:47px;stroke:#ddb15d;fill:none;stroke-width:1.45;stroke-linecap:round;stroke-linejoin:round;margin:auto auto 8px}.frag b{display:block;font-family:'Playfair Display',serif;font-weight:500;font-size:14px;color:#f2e6d2}
+.shahi{background:linear-gradient(115deg,#031b15 0%,#00130f 56%,#041d16 100%);color:#f7f1e8;padding:0;overflow:hidden}
+.shahi-grid{display:grid;grid-template-columns:28% 38% 34%;height:390px;align-items:stretch}
+.shahi-copy{display:flex;flex-direction:column;justify-content:center;padding-right:28px}
+.gold-kicker{text-transform:uppercase;letter-spacing:.19em;color:#d3a24f;font-size:11px;font-weight:600}
+.shahi h2{font-size:46px;line-height:1.02;margin:12px 0 18px;color:white}
+.shahi h2 span{display:block;color:#d6aa5b}
+.shahi-copy p{font-size:13px;color:#d5dad5;max-width:300px;margin:0 0 24px}
+.shahi .btn{background:transparent;color:#f1c66e;border-color:#bd8e3e}
+.shahi-visual{height:100%;position:relative;display:flex;align-items:end;justify-content:center}
+.shahi-visual:before,.shahi-visual:after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none}
+.shahi-visual:before{background:linear-gradient(90deg,#031a14 0%,transparent 13%,transparent 87%,#031812 100%)}
+.shahi-visual:after{background:linear-gradient(0deg,rgba(1,20,15,.22),transparent 45%)}
+.shahi-visual img{width:100%;height:100%;object-fit:cover;object-position:center 48%}
+.fragrance-panel{display:flex;flex-direction:column;justify-content:center;padding-left:18px}
+.fragrance-title{text-align:center;font-family:"Playfair Display",serif;color:#e2bc73;font-size:21px;margin-bottom:18px}
+.frag-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(218,172,83,.45);border-left:1px solid rgba(218,172,83,.3)}
+.frag{text-align:center;padding:17px 6px 14px;border-right:1px solid rgba(218,172,83,.3);border-bottom:1px solid rgba(218,172,83,.3)}
+.frag svg{width:43px;height:43px;stroke:#ddb15d;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin:auto auto 7px}
+.frag b{font-family:"Playfair Display",serif;font-weight:500;font-size:13px;color:#f2e6d2}
 
-    .vision{padding:68px 0;background:#fffefa}.vision-grid{display:grid;grid-template-columns:1fr 1.5fr auto;align-items:center;gap:42px}.vision-art{height:155px;border-radius:50%;opacity:.56;background:radial-gradient(circle at center,transparent 36%,rgba(7,76,53,.12) 37% 38%,transparent 39%),repeating-radial-gradient(circle at center,rgba(7,76,53,.13) 0 1px,transparent 1px 11px);border:1px solid rgba(7,76,53,.12)}.vision h2{font-size:35px;line-height:1.14}.vision p{font-size:13px;color:#5c625e;max-width:520px}
+.vision{padding:48px 0 44px;background:#fffefa}
+.vision-grid{display:grid;grid-template-columns:180px 1fr auto;gap:44px;align-items:center}
+.vision-globe{width:175px;height:120px;border-radius:50%;border:1px solid rgba(6,77,52,.16);background:
+radial-gradient(circle at center,transparent 41%,rgba(6,77,52,.12) 42% 43%,transparent 44%),
+repeating-radial-gradient(circle at center,rgba(6,77,52,.1) 0 1px,transparent 1px 10px);opacity:.6}
+.vision h2{font-size:32px;line-height:1.12}
+.vision p{font-size:12.5px;color:#626a65;max-width:520px;margin:9px 0 0}
 
-    footer{background:linear-gradient(115deg,#063923,#003522);color:#f0f4ef;padding:42px 0 25px}.footer-grid{display:grid;grid-template-columns:1.2fr 1.2fr 1fr;gap:60px}.footer-brand{display:flex;gap:14px;align-items:center}.footer-brand img{width:45px;height:48px;object-fit:contain}.footer-brand .brand-name{color:#fff;font-size:22px}.footer-brand .brand-sub{color:#cfe1d5}.footer h4{font-size:12px;letter-spacing:.12em;margin:0 0 12px;text-transform:uppercase;color:#d4e4da}.footer p,.footer a{font-size:12px;color:#d3ddd6;line-height:1.7}.legal{border-top:1px solid rgba(255,255,255,.12);margin-top:28px;padding-top:18px;font-size:11px;color:#aebeb3;text-align:center}
+footer{background:linear-gradient(110deg,#063c28,#00351f);color:#edf3ef;padding:35px 0 18px}
+.footer-grid{display:grid;grid-template-columns:1.1fr 1.05fr 1.05fr;gap:54px}
+.footer-brand{display:flex;gap:12px;align-items:center}
+.footer-brand img{width:44px;height:50px;object-fit:contain}
+.footer-brand .brand-title{font-size:21px;color:#fff}
+.footer-brand .brand-sub{font-size:7.5px;color:#c7d9ce}
+footer h4{text-transform:uppercase;letter-spacing:.12em;font-size:11px;margin:0 0 10px}
+footer p,footer a{font-size:11.5px;color:#d3dfd7;line-height:1.65}
+.legal{border-top:1px solid rgba(255,255,255,.12);margin-top:22px;padding-top:14px;text-align:center;font-size:10.5px;color:#a9baaf}
 
-    @media (max-width:900px){
-      .wrap{width:min(100% - 28px,var(--max))}.nav{height:76px}.brand{min-width:0}.brand img{width:42px;height:45px}.brand-name{font-size:21px}.brand-sub{font-size:7.5px}nav{display:none}.menu-btn{display:block}
-      .hero,.hero-grid{min-height:700px}.hero{background:var(--cream)}.earth{inset:42% 0 0 0;background-position:center 45%;opacity:.96}.hero-grid{display:block}.hero-copy{padding:65px 0 330px}.hero-copy p{max-width:94%}h1{font-size:52px}
-      .about{padding:65px 0}.about-grid{grid-template-columns:1fr;gap:20px}.about-copy{padding-top:0}.values{margin-top:18px;border-left:0}.value:first-child{border-left:1px solid var(--line)}
-      .service-grid{grid-template-columns:1fr}.service,.service:first-child,.service:last-child{padding:23px 0;border-right:0;border-bottom:1px solid var(--line)}.service:last-child{border-bottom:0}
-      .shahi-grid{grid-template-columns:1fr;gap:24px}.scene{height:310px;order:3}.fragrances{padding:0}.shahi h2{font-size:45px}.vision-grid{grid-template-columns:1fr}.vision-art{display:none}.footer-grid{grid-template-columns:1fr;gap:28px}
-    }
-    @media (max-width:540px){
-      .brand-name{font-size:18px;letter-spacing:.08em}.brand-sub{letter-spacing:.28em}.hero-copy{padding-top:54px}h1{font-size:44px}.about h2{font-size:36px}.values{grid-template-columns:1fr;border:0}.value,.value:first-child{display:grid;grid-template-columns:48px 1fr;text-align:left;column-gap:15px;border:0;border-bottom:1px solid var(--line);padding:16px 0}.value svg{grid-row:1/3;margin:0}.value b,.value small{margin:0}.frag-grid{grid-template-columns:repeat(2,1fr)}.vision h2{font-size:31px}
-    }
-  </style>
+@media(max-width:900px){
+  .wrap{width:min(var(--max),calc(100% - 28px))}
+  .nav{height:78px}.brand img{width:43px;height:48px}.brand-title{font-size:21px}.brand-sub{font-size:7.5px}nav{display:none}.menu{display:block}
+  .hero{height:auto}.hero-grid{grid-template-columns:1fr}.hero-copy{padding:56px 0 35px}.hero-image{height:330px;margin:0 -14px}.hero-image:before{background:linear-gradient(180deg,var(--cream),transparent 23%)}
+  h1{font-size:50px}
+  .about-grid{grid-template-columns:1fr;gap:24px}.values{border-left:0}.value:first-child{border-left:1px solid var(--line)}
+  .icons{grid-template-columns:repeat(3,1fr)}.icon-item:nth-child(4){border-left:1px solid var(--line)}
+  .shahi-grid{height:auto;grid-template-columns:1fr}.shahi-copy{padding:56px 0 30px}.shahi-visual{height:330px;margin:0 -14px}.fragrance-panel{padding:34px 0 56px}
+  .vision-grid{grid-template-columns:1fr}.vision-globe{display:none}.footer-grid{grid-template-columns:1fr;gap:25px}
+}
+@media(max-width:560px){
+  .brand-title{font-size:18px}.brand-sub{letter-spacing:.28em}
+  h1{font-size:43px}.about h2{font-size:35px}
+  .values{grid-template-columns:1fr}.value,.value:first-child{border-left:0;border-right:0;border-bottom:1px solid var(--line);padding:14px 0;display:grid;grid-template-columns:52px 1fr;text-align:left;column-gap:12px}.value svg{grid-row:1/3;margin:0}
+  .icons{grid-template-columns:repeat(2,1fr)}.icon-item:nth-child(odd){border-left:1px solid var(--line)}
+  .frag-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
 </head>
 <body>
 <header>
-  <div class="wrap nav">
-    <a class="brand" href="#home" aria-label="Fayezaan home">
-      <img src="fayezaan-mark.png" alt="Fayezaan official logo mark" />
-      <div><div class="brand-name">FAYEZAAN</div><div class="brand-sub">ENTERPRISE PVT LTD</div></div>
-    </a>
-    <nav aria-label="Primary navigation">
-      <a class="active" href="#home">Home</a><a href="#about">About Us</a><a href="#services">What We Do</a><a href="#brand">Our Brand</a><a href="#contact">Contact</a>
-    </nav>
-    <button class="menu-btn" aria-label="Open menu">☰</button>
-  </div>
+<div class="wrap nav">
+<a class="brand" href="#home" aria-label="Fayezaan home">
+<img src="fayezaan-mark.png" alt="Fayezaan logo">
+<div><div class="brand-title">FAYEZAAN</div><div class="brand-sub">ENTERPRISE PVT LTD</div></div>
+</a>
+<nav><a class="active" href="#home">Home</a><a href="#about">About Us</a><a href="#services">What We Do</a><a href="#brand">Our Brand</a><a href="#contact">Contact</a></nav>
+<button class="menu" aria-label="Open menu">☰</button>
+</div>
 </header>
 
 <main>
 <section class="hero" id="home">
-  <div class="earth" aria-hidden="true"></div>
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <div class="eyebrow">Building value across borders</div>
-      <h1>Together,<br>we create more value,<br><em>benefit for all.</em></h1>
-      <p>Fayezaan Enterprise Pvt Ltd is built on trust, quality and long-term relationships. We connect opportunities across borders and create value that lasts.</p>
-      <a class="btn" href="#services">Explore Our Services <span>→</span></a>
-    </div>
-  </div>
+<div class="wrap hero-grid">
+<div class="hero-copy">
+<div class="eyebrow">Building value across borders</div>
+<h1>Together,<br>we create more value,<br><em>benefit for all.</em></h1>
+<p>Fayezaan Enterprise Pvt Ltd is built on trust, quality and long-term relationships. We connect opportunities across borders and create value that lasts.</p>
+<a class="btn" href="#services">Explore Our Services <span>→</span></a>
+</div>
+<div class="hero-image"><img src="hero-earth.jpg" alt="Earth at night with illuminated global connections"></div>
+</div>
 </section>
 
 <section class="about" id="about">
-  <div class="wrap">
-    <div class="section-kicker">About Fayezaan</div>
-    <div class="about-grid">
-      <h2>A company that stands for <em>benefit for all.</em></h2>
-      <div class="about-copy">At Fayezaan, our belief is simple. When we grow, everyone connected with us grows. We are here to create value that benefits our customers, partners, communities, and the world around us.</div>
-      <div class="values">
-        <div class="value"><svg viewBox="0 0 48 48"><circle cx="24" cy="14" r="5"/><circle cx="11" cy="18" r="4"/><circle cx="37" cy="18" r="4"/><path d="M15 37v-5c0-7 4-11 9-11s9 4 9 11v5M3 36v-4c0-5 3-8 8-8 2 0 4 .5 5.5 1.7M45 36v-4c0-5-3-8-8-8-2 0-4 .5-5.5 1.7"/></svg><b>Together</b><small>We grow through trust and collaboration.</small></div>
-        <div class="value"><svg viewBox="0 0 48 48"><path d="M24 42C15 34 9 27 9 18a15 15 0 0 1 30 0c0 9-6 16-15 24Z"/><path d="M16 20l6 6 11-13"/></svg><b>Value</b><small>We deliver quality that creates real impact.</small></div>
-        <div class="value"><svg viewBox="0 0 48 48"><path d="M24 41V21"/><path d="M24 26c-10 0-15-6-15-16 10 0 15 6 15 16ZM24 21c10 0 15-6 15-16-10 0-15 6-15 16Z"/><path d="M13 41h22"/></svg><b>Future</b><small>We build responsibly for a better tomorrow.</small></div>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="kicker">About Fayezaan</div>
+<div class="about-grid">
+<h2>A company that stands for <em>benefit for all.</em></h2>
+<div class="about-copy">At Fayezaan, our belief is simple. When we grow, everyone connected with us grows. We are here to create value that benefits our customers, partners, communities, and the world around us.</div>
+<div class="values">
+<div class="value"><svg viewBox="0 0 48 48"><circle cx="24" cy="14" r="5"/><circle cx="11" cy="18" r="4"/><circle cx="37" cy="18" r="4"/><path d="M15 37v-5c0-7 4-11 9-11s9 4 9 11v5M3 36v-4c0-5 3-8 8-8 2 0 4 .5 5.5 1.7M45 36v-4c0-5-3-8-8-8-2 0-4 .5-5.5 1.7"/></svg><strong>Together</strong><small>We grow through trust and collaboration.</small></div>
+<div class="value"><svg viewBox="0 0 48 48"><path d="M24 42C15 34 9 27 9 18a15 15 0 0 1 30 0c0 9-6 16-15 24Z"/><path d="M16 20l6 6 11-13"/></svg><strong>Value</strong><small>We deliver quality that creates real impact.</small></div>
+<div class="value"><svg viewBox="0 0 48 48"><path d="M24 41V21"/><path d="M24 26c-10 0-15-6-15-16 10 0 15 6 15 16ZM24 21c10 0 15-6 15-16-10 0-15 6-15 16Z"/><path d="M13 41h22"/></svg><strong>Future</strong><small>We build responsibly for a better tomorrow.</small></div>
+</div>
+</div>
+</div>
 </section>
 
-<section class="services" id="services">
-  <div class="wrap service-grid">
-    <article class="service"><svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="22"/><path d="M6 28h44M28 6c7 7 11 14 11 22s-4 15-11 22M28 6c-7 7-11 14-11 22s4 15 11 22"/></svg><div><h3>Global Trade</h3><p>Sourcing and supplying quality products across domestic and international markets.</p></div></article>
-    <article class="service"><svg viewBox="0 0 56 56"><path d="M7 37h42l-6 8H14l-7-8Z"/><path d="M15 37V23h12v14M27 37V14h10v23M37 37V27h9v10M28 14V8h7v6"/><path d="M10 48c4 2 8 2 12 0 4 2 8 2 12 0 4 2 8 2 12 0"/></svg><div><h3>Export</h3><p>Reliable export solutions with a focus on quality, compliance and customer satisfaction.</p></div></article>
-    <article class="service"><svg viewBox="0 0 56 56"><path d="M5 18h29v24H5zM34 26h9l8 8v8H34z"/><circle cx="15" cy="44" r="4"/><circle cx="43" cy="44" r="4"/></svg><div><h3>Distribution</h3><p>Building strong distribution channels that help products reach where they are needed.</p></div></article>
-  </div>
+<section class="icon-strip" id="services">
+<div class="wrap icons">
+<div class="icon-item"><svg viewBox="0 0 48 48"><circle cx="24" cy="14" r="5"/><circle cx="11" cy="18" r="4"/><circle cx="37" cy="18" r="4"/><path d="M15 37v-5c0-7 4-11 9-11s9 4 9 11v5M3 36v-4c0-5 3-8 8-8 2 0 4 .5 5.5 1.7M45 36v-4c0-5-3-8-8-8-2 0-4 .5-5.5 1.7"/></svg><h3>Together</h3><p>Stronger partnerships, shared growth.</p></div>
+<div class="icon-item"><svg viewBox="0 0 48 48"><path d="M24 42C15 34 9 27 9 18a15 15 0 0 1 30 0c0 9-6 16-15 24Z"/><path d="M16 20l6 6 11-13"/></svg><h3>Value</h3><p>Creating impact that matters.</p></div>
+<div class="icon-item"><svg viewBox="0 0 48 48"><path d="M24 41V21"/><path d="M24 26c-10 0-15-6-15-16 10 0 15 6 15 16ZM24 21c10 0 15-6 15-16-10 0-15 6-15 16Z"/><path d="M13 41h22"/></svg><h3>Future</h3><p>Sustainable today, for tomorrow.</p></div>
+<div class="icon-item"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="19"/><path d="M5 24h38M24 5c6 6 10 12 10 19s-4 13-10 19M24 5c-6 6-10 12-10 19s4 13 10 19"/></svg><h3>Global Trade</h3><p>Connecting markets, creating opportunities.</p></div>
+<div class="icon-item"><svg viewBox="0 0 48 48"><path d="M5 31h38l-5 7H12Z"/><path d="M13 31V20h10v11M23 31V11h9v20M32 31v-8h8v8M23 11V6h7v5"/><path d="M9 41c4 2 7 2 11 0 4 2 8 2 12 0 4 2 7 2 11 0"/></svg><h3>Export</h3><p>Delivering quality across borders.</p></div>
+<div class="icon-item"><svg viewBox="0 0 48 48"><path d="M4 15h26v22H4zM30 23h8l6 7v7H30z"/><circle cx="13" cy="39" r="3.5"/><circle cx="38" cy="39" r="3.5"/></svg><h3>Distribution</h3><p>Reliable. Efficient. On time.</p></div>
+</div>
 </section>
 
 <section class="shahi" id="brand">
-  <div class="wrap shahi-grid">
-    <div class="shahi-copy">
-      <div class="gold-kicker">Our Brand</div>
-      <h2><span>Shahi</span>Premium Incense</h2>
-      <p>Inspired by nature, crafted with tradition. Shahi incense brings peace, purity and positivity to everyday moments.</p>
-      <a class="btn" href="#contact">Explore Shahi <span>→</span></a>
-    </div>
-    <div class="scene"><img src="shahi-scene.jpg" alt="Incense sticks and an ornamental incense burner" /></div>
-    <div class="fragrances">
-      <div class="fragrances-title">Our Signature Fragrances</div>
-      <div class="frag-grid">
-        <div class="frag"><svg viewBox="0 0 48 48"><path d="M24 39c-5-5-13-8-13-17 0-6 5-11 11-11 2-5 11-6 14 0 6 0 10 5 10 10 0 9-12 13-22 18Z"/><path d="M17 19c6-1 10 2 13 7M30 14c-1 6-4 10-10 13M24 39v5"/></svg><b>Rose</b></div>
-        <div class="frag"><svg viewBox="0 0 48 48"><path d="M8 31 31 8l7 7-23 23Z"/><path d="m15 24 9 9M28 11l7 7M11 38h26"/></svg><b>Sandalwood</b></div>
-        <div class="frag"><svg viewBox="0 0 48 48"><path d="M12 27h24v13H12z"/><path d="M15 27c0-6 4-10 9-12 5 2 9 6 9 12M19 20h10M24 15V8"/><path d="M20 8c2 2 3 4 4 7 2-3 3-5 1-8"/></svg><b>Bakhoor</b></div>
-        <div class="frag"><svg viewBox="0 0 48 48"><path d="M24 41V14"/><path d="M24 20 13 9M24 20 35 9M24 14 24 5"/><path d="M13 9c-3 2-5 6-4 10M35 9c3 2 5 6 4 10M9 19c4 3 8 4 12 3M39 19c-4 3-8 4-12 3"/><path d="M16 41h16"/></svg><b>Kasturi</b></div>
-        <div class="frag"><svg viewBox="0 0 48 48"><path d="M13 34c-3-10 5-23 16-27 8 7 10 18 5 27-4 7-15 9-21 0Z"/><path d="M16 30c5-3 10-8 14-15M18 23c4 0 7 1 10 3"/></svg><b>Musk Amber</b></div>
-        <div class="frag"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="4"/><path d="M24 20c-7-7-4-13 0-15 4 2 7 8 0 15ZM28 24c7-7 13-4 15 0-2 4-8 7-15 0ZM24 28c7 7 4 13 0 15-4-2-7-8 0-15ZM20 24c-7 7-13 4-15 0 2-4 8-7 15 0Z"/></svg><b>Jasmine</b></div>
-      </div>
-    </div>
-  </div>
+<div class="wrap shahi-grid">
+<div class="shahi-copy">
+<div class="gold-kicker">Our Brand</div>
+<h2><span>Shahi</span>Premium Incense</h2>
+<p>Inspired by nature, crafted with tradition. Shahi incense brings peace, purity and positivity to everyday moments.</p>
+<a class="btn" href="#contact">Explore Shahi <span>→</span></a>
+</div>
+<div class="shahi-visual"><img src="shahi-scene.jpg" alt="Incense sticks and ornamental burner"></div>
+<div class="fragrance-panel">
+<div class="fragrance-title">Our Signature Fragrances</div>
+<div class="frag-grid">
+<div class="frag"><svg viewBox="0 0 48 48"><path d="M24 39c-5-5-13-8-13-17 0-6 5-11 11-11 2-5 11-6 14 0 6 0 10 5 10 10 0 9-12 13-22 18Z"/><path d="M17 19c6-1 10 2 13 7M30 14c-1 6-4 10-10 13M24 39v5"/></svg><b>Rose</b></div>
+<div class="frag"><svg viewBox="0 0 48 48"><path d="M8 31 31 8l7 7-23 23Z"/><path d="m15 24 9 9M28 11l7 7M11 38h26"/></svg><b>Sandalwood</b></div>
+<div class="frag"><svg viewBox="0 0 48 48"><path d="M12 27h24v13H12z"/><path d="M15 27c0-6 4-10 9-12 5 2 9 6 9 12M19 20h10M24 15V8"/><path d="M20 8c2 2 3 4 4 7 2-3 3-5 1-8"/></svg><b>Bakhoor</b></div>
+<div class="frag"><svg viewBox="0 0 48 48"><path d="M24 41V14"/><path d="M24 20 13 9M24 20 35 9M24 14 24 5"/><path d="M13 9c-3 2-5 6-4 10M35 9c3 2 5 6 4 10M9 19c4 3 8 4 12 3M39 19c-4 3-8 4-12 3"/><path d="M16 41h16"/></svg><b>Kasturi</b></div>
+<div class="frag"><svg viewBox="0 0 48 48"><path d="M13 34c-3-10 5-23 16-27 8 7 10 18 5 27-4 7-15 9-21 0Z"/><path d="M16 30c5-3 10-8 14-15M18 23c4 0 7 1 10 3"/></svg><b>Musk Amber</b></div>
+<div class="frag"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="4"/><path d="M24 20c-7-7-4-13 0-15 4 2 7 8 0 15ZM28 24c7-7 13-4 15 0-2 4-8 7-15 0ZM24 28c7 7 4 13 0 15-4-2-7-8 0-15ZM20 24c-7 7-13 4-15 0 2-4 8-7 15 0Z"/></svg><b>Jasmine</b></div>
+</div>
+</div>
+</div>
 </section>
 
 <section class="vision">
-  <div class="wrap vision-grid">
-    <div class="vision-art" aria-hidden="true"></div>
-    <div><div class="section-kicker">Global Vision</div><h2>Creating opportunities.<br>Delivering value worldwide.</h2><p>We partner with businesses and communities to build stronger connections, responsible growth and lasting value across markets.</p></div>
-    <a class="btn" href="#contact">Let's Work Together <span>→</span></a>
-  </div>
+<div class="wrap vision-grid">
+<div class="vision-globe" aria-hidden="true"></div>
+<div><div class="kicker">Global Vision</div><h2>Creating opportunities.<br>Delivering value worldwide.</h2><p>We partner with businesses and communities to build stronger connections, responsible growth and lasting value across markets.</p></div>
+<a class="btn" href="#contact">Let's Work Together <span>→</span></a>
+</div>
 </section>
 </main>
 
 <footer id="contact">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div><div class="footer-brand"><img src="fayezaan-mark.png" alt="Fayezaan logo"><div><div class="brand-name">FAYEZAAN</div><div class="brand-sub">ENTERPRISE PVT LTD</div></div></div><p style="margin-top:15px">A Hyderabad-based enterprise focused on trade, exports and distribution.</p></div>
-      <div><h4>Registered Office</h4><p>22-2-188/2/1, Komat Wadi,<br>Dabeer pura, Hyderabad - 500024,<br>Telangana, India</p></div>
-      <div><h4>Contact</h4><p><a href="mailto:fayezaanenterprise@gmail.com">fayezaanenterprise@gmail.com</a><br>CIN: U46909TS2026PTC220916<br><a href="https://fayezaan.com">fayezaan.com</a></p></div>
-    </div>
-    <div class="legal">© 2026 Fayezaan Enterprise Pvt Ltd. All rights reserved.</div>
-  </div>
+<div class="wrap">
+<div class="footer-grid">
+<div><div class="footer-brand"><img src="fayezaan-mark.png" alt="Fayezaan logo"><div><div class="brand-title">FAYEZAAN</div><div class="brand-sub">ENTERPRISE PVT LTD</div></div></div><p style="margin-top:14px">Trade, exports and distribution from Hyderabad, India.</p></div>
+<div><h4>Registered Office</h4><p>22-2-188/2/1, Komat Wadi,<br>Dabeer pura, Hyderabad - 500024,<br>Telangana, India</p></div>
+<div><h4>Contact</h4><p><a href="mailto:fayezaanenterprise@gmail.com">fayezaanenterprise@gmail.com</a><br>CIN: U46909TS2026PTC220916<br><a href="https://fayezaan.com">fayezaan.com</a></p></div>
+</div>
+<div class="legal">© 2026 Fayezaan Enterprise Pvt Ltd. All rights reserved.</div>
+</div>
 </footer>
+
 <script>
-  const links=[...document.querySelectorAll('nav a')];
-  const sections=[...document.querySelectorAll('main section[id]')];
-  const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));}}),{rootMargin:'-40% 0px -50%'});
-  sections.forEach(s=>observer.observe(s));
-  document.querySelector('.menu-btn').addEventListener('click',()=>{
-    const nav=document.querySelector('nav');
-    if(getComputedStyle(nav).display==='none'){nav.style.cssText='display:flex;position:absolute;top:76px;left:0;right:0;background:#fffefa;flex-direction:column;gap:0;padding:14px 28px 24px;border-bottom:1px solid #ddd;align-items:flex-start';}
-    else nav.removeAttribute('style');
-  });
+const links=[...document.querySelectorAll('nav a')];
+const sections=[...document.querySelectorAll('main section[id]')];
+new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-35% 0px -55%'}).observe?.(document.querySelector('#home'));
+sections.forEach(s=>{const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-35% 0px -55%'});o.observe(s)});
+document.querySelector('.menu').addEventListener('click',()=>{
+ const n=document.querySelector('nav');
+ if(getComputedStyle(n).display==='none') n.style.cssText='display:flex;position:absolute;top:78px;left:0;right:0;background:#fffefa;flex-direction:column;gap:0;padding:14px 24px 24px;border-bottom:1px solid #ddd;align-items:flex-start';
+ else n.removeAttribute('style');
+});
 </script>
 </body>
 </html>
