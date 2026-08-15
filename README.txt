@@ -1,14 +1,6 @@
-FAYEZAAN WEBSITE V4 — PIXEL MATCH
-=================================
-This build intentionally uses the approved homepage mockup itself as the visual canvas.
-That means the globe, value/future/global trade/export icons, Shahi fragrance icons,
-Global Vision globe and all spacing/photography render exactly as approved, with no
-CSS/SVG reinterpretation.
+FAYEZAAN ENTERPRISE WEBSITE — LOCKED-ASSET BUILD
 
-Files:
-- index.html
-- approved-homepage.png (exact approved artwork)
-- approved-homepage.jpg (high-quality backup)
+Upload index.html and the entire assets folder to the ROOT of the GitHub repository.
+Do not rename the assets folder.
 
-The page contains clickable invisible hotspots for navigation and CTA buttons,
-plus accessible hidden text for screen readers/search indexing.
+This build uses the exact user-supplied logo, hero Earth, Global Vision globe, six business icons, and six fragrance icons. The icon artwork is not redrawn; white backgrounds were removed for clean website placement, and fragrance icon artwork was recolored gold for the approved dark Shahi section.
