@@ -1,111 +1,46 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Fayezaan Enterprise Pvt Ltd — global trade, export and distribution from Hyderabad, India.">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Fayezaan Enterprise Pvt Ltd — trade, export and distribution from Hyderabad, India.">
 <title>Fayezaan Enterprise Pvt Ltd</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 <style>
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth;background:#fff}
-  body{margin:0;background:#fff;font-family:Arial,Helvetica,sans-serif}
-  .site{
-    position:relative;
-    width:100%;
-    max-width:1600px;
-    margin:0 auto;
-    line-height:0;
-    overflow:hidden;
-    background:#fff;
-  }
-  .site img{
-    display:block;
-    width:100%;
-    height:auto;
-    user-select:none;
-    -webkit-user-drag:none;
-  }
-  .hotspot{
-    position:absolute;
-    display:block;
-    z-index:10;
-    border-radius:8px;
-    background:transparent;
-  }
-  .hotspot:focus-visible{
-    outline:3px solid rgba(93,148,61,.9);
-    outline-offset:2px;
-  }
-  .sr-only{
-    position:absolute!important;
-    width:1px!important;height:1px!important;
-    padding:0!important;margin:-1px!important;
-    overflow:hidden!important;clip:rect(0,0,0,0)!important;
-    white-space:nowrap!important;border:0!important;
-  }
-  /* Anchor targets matching the approved full-page artwork */
-  .anchor{position:absolute;left:0;width:1px;height:1px}
-  #home{top:0}
-  #services{top:34.3%}
-  #brand{top:45.2%}
-  #global{top:66.5%}
-  #contact{top:80.7%}
-
-  /* Approved mockup hotspot geometry (percentages of full artwork) */
-  .nav-home{left:36.0%;top:2.4%;width:5.2%;height:2.3%}
-  .nav-about{left:42.2%;top:2.4%;width:6.4%;height:2.3%}
-  .nav-services{left:49.2%;top:2.4%;width:6.5%;height:2.3%}
-  .nav-global{left:57.5%;top:2.4%;width:8.5%;height:2.3%}
-  .nav-shahi{left:66.9%;top:2.4%;width:7.0%;height:2.3%}
-  .nav-contact{left:75.7%;top:2.4%;width:6.8%;height:2.3%}
-  .nav-touch{left:85.2%;top:1.9%;width:10.5%;height:2.7%}
-
-  .btn-services{left:4.0%;top:27.1%;width:19.8%;height:2.7%}
-  .btn-shahi{left:4.0%;top:58.9%;width:19.8%;height:2.7%}
-  .btn-work{left:75.2%;top:73.1%;width:18.4%;height:2.7%}
-
-  /* Keep the approved desktop composition unchanged. On phones we scale it
-     proportionally rather than reflowing/reinterpreting any visual element. */
-  @media (max-width:700px){
-    body{background:#f7f4ed}
-    .site{width:100%;max-width:none}
-  }
+:root{--green:#064d34;--green2:#0f6a48;--leaf:#709d43;--cream:#f7f5ef;--paper:#fffefa;--gold:#cf9d45;--gold2:#e0b35e;--ink:#10241b;--muted:#68716b;--line:#ded9cf;--dark:#031b15;--max:1440px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',Arial,sans-serif;line-height:1.55}img{max-width:100%;display:block}a{text-decoration:none;color:inherit}.wrap{width:min(var(--max),calc(100% - 64px));margin:auto}
+header{background:#fffefa;position:sticky;top:0;z-index:50;border-bottom:1px solid #ece8de}.nav{height:108px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:17px}.brand img{width:57px;height:66px;object-fit:contain}.brand-name{font:500 29px/1 'Playfair Display',serif;letter-spacing:.11em;color:#153d2b}.brand-sub{font-size:9px;letter-spacing:.37em;color:#315b47;margin-top:10px;font-weight:600}.navlinks{display:flex;gap:40px;align-items:center;font-size:14px;font-weight:500}.navlinks a{padding:42px 0 36px;position:relative}.navlinks a:hover:after,.navlinks a.active:after{content:'';position:absolute;height:2px;background:var(--leaf);left:0;right:0;bottom:25px}.contact-pill{padding:12px 19px!important;background:var(--green);color:#fff;border-radius:6px}.contact-pill:after{display:none!important}
+.hero{background:var(--cream);border-bottom:1px solid #dfd9ce}.hero-grid{display:grid;grid-template-columns:43% 57%;height:610px}.hero-copy{display:flex;flex-direction:column;justify-content:center;padding-right:46px}.eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#20583d;display:flex;align-items:center;gap:13px}.eyebrow:before{content:'';width:27px;height:1px;background:var(--leaf)}h1,h2,h3{font-family:'Playfair Display',serif;font-weight:500;margin:0}h1{font-size:64px;line-height:1.05;letter-spacing:-.035em;margin:24px 0 23px}h1 em{color:var(--green2)}.hero-copy p{font-size:15px;color:#3f4a44;max-width:470px;margin:0 0 29px}.btn{display:inline-flex;align-items:center;gap:32px;background:var(--green);border:1px solid var(--green);color:#fff;border-radius:5px;padding:14px 19px;font-size:13px;width:max-content}.hero-art{height:100%;overflow:hidden;position:relative;background:#06110e}.hero-art:before{content:'';position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,var(--cream) 0%,rgba(247,245,239,.86) 7%,rgba(247,245,239,.2) 18%,transparent 37%)}.hero-art img{width:100%;height:100%;object-fit:cover;object-position:53% center;filter:saturate(1.03) contrast(1.03)}
+.values-strip{background:#fffefa;border-bottom:1px solid #e7e2d8}.six{display:grid;grid-template-columns:repeat(6,1fr)}.card{text-align:center;padding:31px 18px 27px;border-right:1px solid var(--line)}.card:first-child{border-left:1px solid var(--line)}.ico{width:50px;height:50px;margin:0 auto 10px;stroke:var(--green);fill:none;stroke-width:1.55;stroke-linecap:round;stroke-linejoin:round}.card h3{font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;margin:0 0 6px}.card p{font-size:11px;color:#65706a;line-height:1.45;margin:0}
+.about{padding:64px 0 60px}.about-grid{display:grid;grid-template-columns:31% 31% 38%;gap:48px;align-items:center}.section-label{text-transform:uppercase;letter-spacing:.2em;font-size:11px;font-weight:600;color:var(--green);margin-bottom:14px}.about h2{font-size:44px;line-height:1.12}.about h2 em{color:var(--green2)}.about-copy{font-size:15px;color:#47534d}.about-values{display:grid;grid-template-columns:repeat(3,1fr);border-left:1px solid var(--line)}.mini{text-align:center;padding:3px 17px;border-right:1px solid var(--line)}.mini .ico{width:44px;height:44px}.mini strong{font-family:'Playfair Display',serif;font-size:18px;display:block;margin-bottom:5px}.mini span{font-size:11px;color:#6a726d;line-height:1.5;display:block}
+.shahi{background:linear-gradient(115deg,#031c15,#00140f 58%,#041b15);color:#f6f0e7}.shahi-grid{height:520px;display:grid;grid-template-columns:29% 37% 34%;align-items:stretch}.shahi-copy{display:flex;flex-direction:column;justify-content:center;padding-right:26px}.gold-label{text-transform:uppercase;letter-spacing:.19em;font-size:11px;color:var(--gold2);font-weight:600}.shahi h2{font-size:54px;line-height:.98;margin:14px 0 21px;color:white}.shahi h2 span{display:block;color:#d8aa56}.shahi-copy p{font-size:13px;color:#d9ddd9;max-width:310px;margin:0 0 25px}.shahi .btn{background:transparent;color:#efc66f;border-color:#b98d43}.shahi-art{position:relative;overflow:hidden;height:100%}.shahi-art:before{content:'';position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,#031b15 0%,transparent 13%,transparent 88%,#031a14 100%)}.shahi-art img{width:100%;height:100%;object-fit:cover;object-position:center}.fragrance{display:flex;flex-direction:column;justify-content:center;padding-left:16px}.fragrance h3{text-align:center;color:#e3bb70;font-size:22px;margin:0 0 22px}.frag-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(212,164,75,.42);border-left:1px solid rgba(212,164,75,.25)}.frag{text-align:center;padding:19px 7px 15px;border-right:1px solid rgba(212,164,75,.28);border-bottom:1px solid rgba(212,164,75,.28)}.frag .ico{width:49px;height:49px;stroke:#dca94e;margin-bottom:8px}.frag b{font-family:'Playfair Display',serif;color:#f0e6d5;font-weight:500;font-size:14px}
+.vision{padding:55px 0 49px}.vision-grid{display:grid;grid-template-columns:230px 1fr auto;gap:52px;align-items:center}.wire-globe{width:215px;height:170px}.wire-globe circle,.wire-globe ellipse,.wire-globe path,.wire-globe line{fill:none;stroke:#78927f;stroke-width:.8;opacity:.55}.wire-globe .node{fill:#285940;stroke:none;opacity:.8}.vision h2{font-size:36px;line-height:1.12}.vision p{font-size:12.5px;color:#626a65;max-width:550px;margin:10px 0 0}
+footer{background:linear-gradient(110deg,#06452d,#00341f);color:#eef3ef;padding:38px 0 18px}.footer-grid{display:grid;grid-template-columns:1.1fr .8fr .9fr 1.15fr;gap:48px}.footer-brand{display:flex;align-items:center;gap:12px}.footer-brand img{width:45px;height:52px;object-fit:contain}.footer-brand .brand-name{font-size:20px;color:#fff}.footer-brand .brand-sub{font-size:7px;color:#c9d7ce}.footer-col h4{font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin:0 0 10px}.footer-col a,.footer-col p{display:block;font-size:11.5px;color:#d4dfd7;line-height:1.75;margin:0}.legal{border-top:1px solid rgba(255,255,255,.12);margin-top:24px;padding-top:15px;font-size:10.5px;color:#adc0b4;display:flex;justify-content:space-between}
+@media(max-width:900px){.wrap{width:min(var(--max),calc(100% - 30px))}.nav{height:82px}.brand img{width:44px;height:51px}.brand-name{font-size:22px}.brand-sub{font-size:7px}.navlinks{gap:20px;font-size:12px}.contact-pill{display:none}.hero-grid{grid-template-columns:1fr;height:auto}.hero-copy{padding:54px 0 35px}.hero-art{height:380px;margin:0 -15px}.hero-art:before{background:linear-gradient(180deg,var(--cream),transparent 19%)}h1{font-size:50px}.six{grid-template-columns:repeat(3,1fr)}.card:nth-child(4){border-left:1px solid var(--line)}.about-grid{grid-template-columns:1fr;gap:28px}.shahi-grid{height:auto;grid-template-columns:1fr}.shahi-copy{padding:58px 0 28px}.shahi-art{height:360px;margin:0 -15px}.fragrance{padding:35px 0 55px}.vision-grid{grid-template-columns:1fr}.wire-globe{display:none}.footer-grid{grid-template-columns:1fr 1fr}.legal{flex-direction:column;gap:8px}}
 </style>
-</head>
-<body>
-<div class="site" aria-label="Fayezaan Enterprise Pvt Ltd official website">
-  <span id="home" class="anchor"></span>
-  <span id="services" class="anchor"></span>
-  <span id="brand" class="anchor"></span>
-  <span id="global" class="anchor"></span>
-  <span id="contact" class="anchor"></span>
-
-  <img src="approved-homepage.png" alt="Fayezaan Enterprise Pvt Ltd homepage with global trade, export, distribution and Shahi Premium Incense sections">
-
-  <a class="hotspot nav-home" href="#home" aria-label="Home"></a>
-  <a class="hotspot nav-about" href="#home" aria-label="About Us"></a>
-  <a class="hotspot nav-services" href="#services" aria-label="Services"></a>
-  <a class="hotspot nav-global" href="#global" aria-label="Global Trade"></a>
-  <a class="hotspot nav-shahi" href="#brand" aria-label="Shahi Brand"></a>
-  <a class="hotspot nav-contact" href="#contact" aria-label="Contact"></a>
-  <a class="hotspot nav-touch" href="mailto:fayezaanenterprise@gmail.com" aria-label="Get in Touch"></a>
-
-  <a class="hotspot btn-services" href="#services" aria-label="Explore Our Services"></a>
-  <a class="hotspot btn-shahi" href="#brand" aria-label="Explore Shahi Brand"></a>
-  <a class="hotspot btn-work" href="mailto:fayezaanenterprise@gmail.com" aria-label="Let's Work Together"></a>
-
-  <div class="sr-only">
-    <h1>Fayezaan Enterprise Pvt Ltd</h1>
-    <p>Together, we create more value, benefit for all.</p>
-    <h2>Services</h2>
-    <p>Together. Value. Future. Global Trade. Export. Distribution.</p>
-    <h2>Shahi Premium Incense</h2>
-    <p>Inspired by nature, crafted with tradition. Signature fragrances include Rose, Sandalwood, Bakhoor, Kasturi, Musk Amber and Jasmine.</p>
-    <h2>Global Vision</h2>
-    <p>Creating opportunities. Delivering value worldwide.</p>
-    <h2>Contact</h2>
-    <p>Fayezaan Enterprise Pvt Ltd, Hyderabad, Telangana, India. Email: fayezaanenterprise@gmail.com.</p>
-  </div>
-</div>
-</body>
-</html>
+</head><body>
+<header><div class="wrap nav"><a class="brand" href="#home"><img src="fayezaan-mark.png" alt="Fayezaan logo"><div><div class="brand-name">FAYEZAAN</div><div class="brand-sub">ENTERPRISE PVT LTD</div></div></a><nav class="navlinks"><a class="active" href="#home">Home</a><a href="#about">About Us</a><a href="#services">Services</a><a href="#vision">Global Trade</a><a href="#brand">Shahi Brand</a><a href="#contact">Contact</a><a class="contact-pill" href="mailto:fayezaanenterprise@gmail.com">Get in Touch</a></nav></div></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid"><div class="hero-copy"><div class="eyebrow">Building value across borders</div><h1>Together,<br>we create more value,<br><em>benefit for all.</em></h1><p>Fayezaan Enterprise Pvt Ltd is built on trust, quality and long-term relationships. We connect opportunities across borders and create value that lasts.</p><a class="btn" href="#services">Explore Our Services <span>→</span></a></div><div class="hero-art"><img src="hero-earth.jpg" alt="Earth at night"></div></div></section>
+<section class="values-strip" id="services"><div class="wrap six">
+<div class="card"><svg class="ico" viewBox="0 0 48 48"><circle cx="24" cy="13" r="5"/><circle cx="11" cy="17" r="4"/><circle cx="37" cy="17" r="4"/><path d="M15 38v-5c0-7 4-11 9-11s9 4 9 11v5M3 36v-4c0-5 3-8 8-8 2 0 4 .5 5.5 1.7M45 36v-4c0-5-3-8-8-8-2 0-4 .5-5.5 1.7"/></svg><h3>Together</h3><p>Stronger partnerships,<br>shared growth.</p></div>
+<div class="card"><svg class="ico" viewBox="0 0 48 48"><path d="M8 13h32L24 42 8 13Z"/><path d="m8 13 9 10h14l9-10M17 23l7 19 7-19M17 23l2-10M31 23l-2-10"/></svg><h3>Value</h3><p>Creating impact<br>that matters.</p></div>
+<div class="card"><svg class="ico" viewBox="0 0 48 48"><path d="M24 41V21"/><path d="M24 26c-10 0-15-6-15-16 10 0 15 6 15 16ZM24 21c10 0 15-6 15-16-10 0-15 6-15 16Z"/><path d="M13 41h22"/></svg><h3>Future</h3><p>Sustainable today,<br>for tomorrow.</p></div>
+<div class="card"><svg class="ico" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19"/><path d="M5 24h38M24 5c6 6 10 12 10 19s-4 13-10 19M24 5c-6 6-10 12-10 19s4 13 10 19"/></svg><h3>Global Trade</h3><p>Connecting markets,<br>creating opportunities.</p></div>
+<div class="card"><svg class="ico" viewBox="0 0 48 48"><path d="M5 31h38l-5 7H12Z"/><path d="M13 31V20h10v11M23 31V11h9v20M32 31v-8h8v8M23 11V6h7v5"/></svg><h3>Export</h3><p>Delivering quality<br>across borders.</p></div>
+<div class="card"><svg class="ico" viewBox="0 0 48 48"><path d="M4 15h26v22H4zM30 23h8l6 7v7H30z"/><circle cx="13" cy="39" r="3.5"/><circle cx="38" cy="39" r="3.5"/></svg><h3>Distribution</h3><p>Reliable. Efficient.<br>On time.</p></div>
+</div></section>
+<section class="about" id="about"><div class="wrap"><div class="section-label">About Fayezaan</div><div class="about-grid"><h2>A company that stands for <em>benefit for all.</em></h2><div class="about-copy">At Fayezaan, our belief is simple. When we grow, everyone connected with us grows. We are here to create value that benefits our customers, partners, communities, and the world around us.</div><div class="about-values"><div class="mini"><svg class="ico" viewBox="0 0 48 48"><circle cx="24" cy="13" r="5"/><circle cx="11" cy="17" r="4"/><circle cx="37" cy="17" r="4"/><path d="M15 38v-5c0-7 4-11 9-11s9 4 9 11v5M3 36v-4c0-5 3-8 8-8M45 36v-4c0-5-3-8-8-8"/></svg><strong>Together</strong><span>We grow through trust and collaboration.</span></div><div class="mini"><svg class="ico" viewBox="0 0 48 48"><path d="M8 13h32L24 42 8 13Z"/><path d="m8 13 9 10h14l9-10M17 23l7 19 7-19"/></svg><strong>Value</strong><span>We deliver quality that creates real impact.</span></div><div class="mini"><svg class="ico" viewBox="0 0 48 48"><path d="M24 41V21"/><path d="M24 26c-10 0-15-6-15-16 10 0 15 6 15 16ZM24 21c10 0 15-6 15-16-10 0-15 6-15 16Z"/><path d="M13 41h22"/></svg><strong>Future</strong><span>We build responsibly for a better tomorrow.</span></div></div></div></div></section>
+<section class="shahi" id="brand"><div class="wrap shahi-grid"><div class="shahi-copy"><div class="gold-label">Our Signature Fragrances</div><h2><span>SHAHI</span>Premium Incense</h2><p>Inspired by nature, crafted with tradition. Shahi incense brings peace, purity and positivity to your everyday moments.</p><a class="btn" href="#contact">Explore Shahi Brand <span>→</span></a></div><div class="shahi-art"><img src="shahi-scene.jpg" alt="Incense burner and sticks"></div><div class="fragrance"><h3>Our Signature Fragrances</h3><div class="frag-grid">
+<div class="frag"><svg class="ico" viewBox="0 0 48 48"><path d="M24 37c-6-5-13-7-13-15 0-5 4-9 9-9 3-6 11-6 14 0 5 0 9 4 9 9 0 8-9 11-19 15Z"/><path d="M17 19c6 0 10 3 13 7M29 15c-1 5-4 9-10 12M24 37v7"/></svg><b>Rose</b></div>
+<div class="frag"><svg class="ico" viewBox="0 0 48 48"><path d="M8 31 31 8l7 7-23 23Z"/><path d="m15 24 9 9M28 11l7 7M11 38h26"/></svg><b>Sandalwood</b></div>
+<div class="frag"><svg class="ico" viewBox="0 0 48 48"><path d="M12 28h24v12H12z"/><path d="M15 28c0-6 4-10 9-13 5 3 9 7 9 13M19 21h10M24 15V8"/><path d="M21 9c2 2 3 4 3 6 3-3 3-6 1-8"/></svg><b>Bakhoor</b></div>
+<div class="frag"><svg class="ico" viewBox="0 0 48 48"><path d="M24 41V14M24 20 13 9M24 20 35 9M24 14V5"/><path d="M13 9c-4 3-5 7-4 11M35 9c4 3 5 7 4 11M9 20c4 3 8 4 12 3M39 20c-4 3-8 4-12 3M16 41h16"/></svg><b>Kasturi</b></div>
+<div class="frag"><svg class="ico" viewBox="0 0 48 48"><path d="M12 35c-3-10 5-24 17-28 8 7 10 19 5 28-4 7-16 9-22 0Z"/><path d="M16 30c6-4 11-9 14-15M18 23c4 0 7 1 10 3"/></svg><b>Musk Amber</b></div>
+<div class="frag"><svg class="ico" viewBox="0 0 48 48"><circle cx="24" cy="24" r="4"/><path d="M24 20c-7-7-4-13 0-15 4 2 7 8 0 15ZM28 24c7-7 13-4 15 0-2 4-8 7-15 0ZM24 28c7 7 4 13 0 15-4-2-7-8 0-15ZM20 24c-7 7-13 4-15 0 2-4 8-7 15 0Z"/></svg><b>Jasmine</b></div>
+</div></div></div></section>
+<section class="vision" id="vision"><div class="wrap vision-grid"><svg class="wire-globe" viewBox="0 0 220 170"><ellipse cx="110" cy="85" rx="98" ry="75"/><ellipse cx="110" cy="85" rx="64" ry="75"/><ellipse cx="110" cy="85" rx="30" ry="75"/><ellipse cx="110" cy="85" rx="98" ry="28"/><ellipse cx="110" cy="85" rx="98" ry="52"/><path d="M15 78c25-17 48-20 67-7 13 9 25 10 38 1 18-12 36-10 69 9M23 111c25-12 44-10 61 3 12 9 27 7 42-2 18-10 37-8 63 8"/><circle class="node" cx="55" cy="58" r="3"/><circle class="node" cx="94" cy="93" r="3"/><circle class="node" cx="143" cy="53" r="3"/><circle class="node" cx="169" cy="104" r="3"/><line x1="55" y1="58" x2="94" y2="93"/><line x1="94" y1="93" x2="143" y2="53"/><line x1="143" y1="53" x2="169" y2="104"/></svg><div><div class="section-label">Global Vision</div><h2>Creating opportunities.<br>Delivering value worldwide.</h2><p>We partner with businesses and communities to build stronger connections, drive sustainable growth and create lasting impact across the globe.</p></div><a class="btn" href="mailto:fayezaanenterprise@gmail.com">Let's Work Together <span>→</span></a></div></section>
+</main>
+<footer id="contact"><div class="wrap"><div class="footer-grid"><div><div class="footer-brand"><img src="fayezaan-mark.png" alt="Fayezaan logo"><div><div class="brand-name">FAYEZAAN</div><div class="brand-sub">ENTERPRISE PVT LTD</div></div></div><p style="margin-top:14px">Building value across borders.<br>Creating benefit for all.</p></div><div class="footer-col"><h4>Quick Links</h4><a href="#home">Home</a><a href="#about">About Us</a><a href="#services">Services</a><a href="#brand">Shahi Brand</a><a href="#contact">Contact</a></div><div class="footer-col"><h4>Our Services</h4><a href="#services">Global Trade</a><a href="#services">Export</a><a href="#services">Distribution</a><a href="#contact">Business Partnerships</a></div><div class="footer-col"><h4>Contact Us</h4><p>22-2-188/2/1, Komat Wadi,<br>Dabeer pura, Hyderabad - 500024,<br>Telangana, India</p><a href="mailto:fayezaanenterprise@gmail.com">fayezaanenterprise@gmail.com</a><p>CIN: U46909TS2026PTC220916</p></div></div><div class="legal"><span>© 2026 Fayezaan Enterprise Pvt Ltd. All rights reserved.</span><span>fayezaan.com</span></div></div></footer>
+</body></html>
